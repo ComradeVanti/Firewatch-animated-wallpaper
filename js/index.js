@@ -4,7 +4,8 @@
     const baseOffset = 10
 
     const layers = [
-        {element: document.getElementById("layer1"), speed: 1}
+        {element: document.getElementById("layer1"), speed: 1},
+        {element: document.getElementById("layer2"), speed: 0.9}
     ]
 
 
