@@ -9,8 +9,8 @@
 
 .layer {
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
-    height: 100vh;
-    transform: translate(-50%, 0%);
+    width: 120vw;
+    transform: translate(-10vw);
 }
