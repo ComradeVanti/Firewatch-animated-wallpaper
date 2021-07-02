@@ -5,14 +5,14 @@
 
     const layers = [
         {element: document.getElementById("layer1"), speed: 1},
-        {element: document.getElementById("layer2"), speed: 0.8},
-        {element: document.getElementById("layer3"), speed: 0.5},
-        {element: document.getElementById("layer4"), speed: 0.4},
-        {element: document.getElementById("layer5"), speed: 0.2},
-        {element: document.getElementById("layer6"), speed: 0.1},
-        {element: document.getElementById("layer7"), speed: 0.05},
-        {element: document.getElementById("layer8"), speed: 0.025},
-        {element: document.getElementById("layer9"), speed: 0.0125},
+        {element: document.getElementById("layer2"), speed: 0.9},
+        {element: document.getElementById("layer3"), speed: 0.45},
+        {element: document.getElementById("layer4"), speed: 0.2},
+        {element: document.getElementById("layer5"), speed: 0.1},
+        {element: document.getElementById("layer6"), speed: 0.05},
+        {element: document.getElementById("layer7"), speed: 0.025},
+        {element: document.getElementById("layer8"), speed: 0.0125},
+        {element: document.getElementById("layer9"), speed: 0.005},
         {element: document.getElementById("layer10"), speed: 0}
     ]
 
