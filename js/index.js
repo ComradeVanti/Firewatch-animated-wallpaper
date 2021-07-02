@@ -7,7 +7,8 @@
         {element: document.getElementById("layer1"), speed: 1},
         {element: document.getElementById("layer2"), speed: 0.8},
         {element: document.getElementById("layer3"), speed: 0.5},
-        {element: document.getElementById("layer4"), speed: 0.4}
+        {element: document.getElementById("layer4"), speed: 0.4},
+        {element: document.getElementById("layer5"), speed: 0.2}
     ]
 
 
