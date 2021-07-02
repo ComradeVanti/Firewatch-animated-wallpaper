@@ -5,7 +5,8 @@
 
     const layers = [
         {element: document.getElementById("layer1"), speed: 1},
-        {element: document.getElementById("layer2"), speed: 0.9}
+        {element: document.getElementById("layer2"), speed: 0.9},
+        {element: document.getElementById("layer3"), speed: 0.75}
     ]
 
 
