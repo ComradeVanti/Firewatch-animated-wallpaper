@@ -12,5 +12,5 @@
     left: 0;
     bottom: 0;
     width: 120vw;
-    transform: translate(-10vw);
+    transform: translate(-10vw, -10vh);
 }

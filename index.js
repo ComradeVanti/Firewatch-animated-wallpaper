@@ -1,7 +1,9 @@
 ﻿window.onload = function () {
 
-    const maxMovePercent = 10
-    const baseOffset = 10
+    const maxXOffset = 10
+    const baseXOffset = 10
+    const maxYOffset = 5
+    const baseYOffset = 10
 
     const layers = [
         {element: document.getElementById("layer1"), speed: 1},
@@ -21,24 +23,38 @@
         return a + (b - a) * t
     }
 
-    function translateLayer(layer, offset) {
-        layer.element.style.transform = `translate(${offset}vw)`
+    function translateLayer(layer, xOffset, yOffset) {
+        layer.element.style.transform = `translate(${xOffset}vw, ${yOffset}vh)`
     }
 
-    function moveLayer(layer, xPercent) {
-        let t = xPercent * layer.speed
-        let offset = interpolate(maxMovePercent, -maxMovePercent, t) - baseOffset
-        translateLayer(layer, offset)
+    function calculateXOffset(layerSpeed, xPercent) {
+        let t = xPercent * layerSpeed
+        return interpolate(maxXOffset, -maxXOffset, t) - baseXOffset
     }
 
-    function moveLayers(xPercent) {
-        layers.forEach(layer => moveLayer(layer, xPercent))
+    function calculateYOffset(layerSpeed, yPercent) {
+        let t = yPercent * layerSpeed
+        return interpolate(maxYOffset, -maxYOffset, t) + baseYOffset
+    }
+
+    function moveLayer(layer, xPercent, yPercent) {
+        let xOffset = calculateXOffset(layer.speed, xPercent)
+        let yOffset = calculateYOffset(layer.speed, yPercent)
+        translateLayer(layer, xOffset, yOffset)
+    }
+
+    function moveLayers(xPercent, yPercent) {
+        layers.forEach(layer => moveLayer(layer, xPercent, yPercent))
     }
 
     function onMouseMoved(event) {
         let x = event.clientX
+        let y = event.clientY
+
         let xPercent = x / window.innerWidth
-        moveLayers(xPercent)
+        let yPercent = y / window.innerHeight
+
+        moveLayers(xPercent, yPercent)
     }
 
     document.onmousemove = onMouseMoved
